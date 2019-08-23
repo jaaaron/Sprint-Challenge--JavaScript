@@ -1,3 +1,5 @@
+import { setupMaster } from "cluster";
+
 // ==== Callbacks ====  
 
 /* Step 1: Create a higher-order function
@@ -15,20 +17,29 @@ function consume (a, b, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-
-
-/* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
-
+function add(n1,n2){
+  let results = n1+n2;
+  console.log(results);
+}
+function multiply(n1,n2){
+  let results = n1*n2;
+  console.log(results);
+}
+function greeting(fName,lName){
+  let results = (`Hello ${fName} ${lName}, nice to meet you!`)
+  console.log(results);
+}
+//  Step 3: Check your work by un-commenting the following calls to consume(): 
+ console.log(consume(2, 2, add)); // 4
+ console.log(consume(10, 16, multiply)); // 160
+ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ==== 
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-
+// By calling the variable, the nestedfunction can access it.
 
 const external = "I'm outside the function";
 
