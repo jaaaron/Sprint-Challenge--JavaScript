@@ -38,6 +38,7 @@ A function returns a value, but a procedure does not. A method is similar to a f
 Window/Global Object Binding, Implicit Binding, New binding, Explicit binding.
 5. Why do we need super() in an extended class?
 super() is used as a function which calls the parent class.
+
 ## Project Set up
 
 Follow these steps to set up and work on your project:
