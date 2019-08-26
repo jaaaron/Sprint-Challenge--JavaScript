@@ -77,10 +77,11 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+let universities = [];
 for (let i=0; i<graduates.length; i++) {
   universities[i] = graduates[i].university;
 }
+universities = universities.sort();
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -128,9 +129,10 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-for (let i=0; i<zooAnimals.length; i++) {
-   displayNames[i] = `Name: `+ zooAnimals[i].animal_name + ', ' + `Scientific: ` +zooAnimals[i].scientific_name + `.`;
-  }
+zooAnimals.forEach(zooAnimal => {
+  displayNames.push(`Name: `+ zooAnimal.animal_name + ', ' + `Scientific: ` +zooAnimal.scientific_name + `.`);
+}) 
+  
 console.log(displayNames);
 
 /* Request 2: .map()
