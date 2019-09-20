@@ -22,7 +22,6 @@ function add(n1,n2){
 }
 function multiply(n1,n2){
   return n1*n2;
-
 }
 function greeting(fName,lName){
   return (`Hello ${fName} ${lName}, nice to meet you!`);
